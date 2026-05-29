@@ -41,11 +41,11 @@ namespace CybersecurityChatbot
             string topic = Recall("favouriteTopic");
 
             if (name != null && topic != null)
-                return $"As someone interested in {topic}, {name}, here's something relevant — ";
+                return $"As someone interested in {topic}, {name}, here's something relevant : ";
             if (topic != null)
-                return $"As someone interested in {topic}, here's something relevant — ";
+                return $"As someone interested in {topic}, here's something relevant : ";
             if (name != null)
-                return $"Here's something for you, {name} — ";
+                return $"Here's something for you, {name}  ";
 
             return string.Empty;
         }

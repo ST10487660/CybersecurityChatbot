@@ -1,26 +1,14 @@
 name: ci
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+on: [push]
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up .NET 8
-        uses: actions/setup-dotnet@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
-
-      - name: Restore dependencies
-        run: dotnet restore CybersecurityChatbot/CybersecurityChatbot.csproj
+      - run: dotnet build CybersecurityChatbot.csproj
 
       - name: Build
         run: dotnet build CybersecurityChatbot/CybersecurityChatbot.csproj --no-restore --configuration Release

@@ -5,7 +5,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '4.x'
-      - run: dotnet build CybersecurityChatbot.csproj
+      - uses: microsoft/setup-msbuild@v2
+      - run: msbuild CybersecurityChatbot.csproj /p:Configuration=Release

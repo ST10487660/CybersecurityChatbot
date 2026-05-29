@@ -9,12 +9,13 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        
-        
+
+
 
         <!-- Header with Logo -->
         <Border Grid.Row="0" Background="#2C3E50" Padding="15">
@@ -46,7 +47,7 @@
         </Border>
 
         <!-- Chat Area -->
-        <ScrollViewer x:Name="ChatScroll" Grid.Row="1"
+        <ScrollViewer x:Name="ChatScroll" Grid.Row="2"
                       VerticalScrollBarVisibility="Auto"
                       Background="White" 
                       Padding="10">
@@ -54,7 +55,7 @@
         </ScrollViewer>
 
         <!-- Input Area -->
-        <Border Grid.Row="2" Background="#ECF0F1" Padding="10">
+        <Border Grid.Row="3" Background="#ECF0F1" Padding="10">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -71,7 +72,7 @@
         </Border>
 
         <!-- Status Bar -->
-        <Border Grid.Row="3" Background="#34495E" Padding="10">
+        <Border Grid.Row="4" Background="#34495E" Padding="10">
             <TextBlock x:Name="StatusBar"
                        Text="Type your name to begin."
                        Foreground="#BDC3C7" 

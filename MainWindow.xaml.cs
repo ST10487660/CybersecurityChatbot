@@ -180,8 +180,7 @@ namespace CybersecurityChatbot
 
         // ── Startup helpers ────────────────────────────────────────
 
-        /// <summary>
-        /// Loads logo.png (or logo.jpg) from the application folder.
+        
         
         private void LoadLogo()
         {
@@ -224,16 +223,24 @@ namespace CybersecurityChatbot
             try
             {
                 string path = Path.Combine(
-                    AppDomain.CurrentDomain.BaseDirectory, "greeting.wav");
+                    AppDomain.CurrentDomain.BaseDirectory,
+                    "Resources",
+                    "greeting.wav");
 
                 if (File.Exists(path))
-                    new SoundPlayer(path).Play();
+                {
+                    SoundPlayer player = new SoundPlayer(path);
+                    player.Load();
+                    player.Play();
+                }
                 else
-                    MessageBox.Show("greeting.wav not found at: " + path);
+                {
+                    MessageBox.Show("Audio file not found:\n" + path);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Audio error: " + ex.Message);
+                MessageBox.Show("Error playing audio:\n" + ex.Message);
             }
         }
         //Ascii art generated with https://patorjk.com/software/taag/#p=display&f=Big&t=CyberBot

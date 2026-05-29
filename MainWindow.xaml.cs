@@ -236,7 +236,7 @@ namespace CybersecurityChatbot
                 MessageBox.Show("Audio error: " + ex.Message);
             }
         }
-
+        //Ascii art generated with https://patorjk.com/software/taag/#p=display&f=Big&t=CyberBot
         private void LoadAsciiArt()
         {
             AsciiArtBlock.Text =

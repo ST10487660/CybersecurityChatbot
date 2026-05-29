@@ -1,4 +1,4 @@
-name: ci
+name: Build
 on: [push]
 jobs:
   build:
@@ -9,6 +9,3 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - run: dotnet build CybersecurityChatbot.csproj
-
-      - name: Build
-        run: dotnet build CybersecurityChatbot/CybersecurityChatbot.csproj --no-restore --configuration Release

@@ -44,7 +44,7 @@ namespace CybersecurityChatbot
                     Sentiment.Happy, new List<string>
                     {
                         "great", "thanks", "helpful", "awesome", "love it",
-                        "amazing", "perfect", "excellent", "happy", "glad", "cool"
+                        "amazing", "perfect", "excellent", "happy", "glad", "cool" , "Tuff"
                     }
                 }
             };

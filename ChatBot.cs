@@ -41,7 +41,7 @@ namespace CybersecurityChatbot
             string input = userInput.Trim();
             string lower = input.ToLower();
 
-            // Step 1: Capture name
+            //  Capture name
             if (_awaitingName)
             {
                 string name = Capitalise(input.Split(' ')[0]);
@@ -52,19 +52,19 @@ namespace CybersecurityChatbot
                 return;
             }
 
-            // Step 2: Follow-up phrases
+            //  Follow-up phrases
             if (IsFollowUp(lower))
             {
                 Fire(HandleFollowUp());
                 return;
             }
 
-            // Step 3: Sentiment detection
+            //  Sentiment detection
             Sentiment detected = _sentiment.Detect(lower);
             string sentimentOpener = _sentiment.GetSentimentResponse(detected);
             OnSentimentChanged?.Invoke(detected);
 
-            // Step 4: Keyword matching
+            //  Keyword matching
             string matchedKeyword;
             string keywordResponse = _keywords.GetResponse(lower, out matchedKeyword);
 
@@ -75,7 +75,7 @@ namespace CybersecurityChatbot
                 return;
             }
 
-            // Step 5: Special phrases
+            //  Special phrases
             if (lower.Contains("how are you"))
             {
                 Fire($"Running perfectly and ready to help, {_memory.UserName}! What would you like to know?");
@@ -100,7 +100,7 @@ namespace CybersecurityChatbot
                 return;
             }
 
-            // Step 6: Fallback
+            //  Fallback
             Fire(sentimentOpener + "I'm not sure I understand that - could you try rephrasing?\n\nYou can ask me about: " + string.Join(", ", _keywords.GetAllKeywords()));
         }
 

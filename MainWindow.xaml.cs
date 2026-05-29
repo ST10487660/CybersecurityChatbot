@@ -182,8 +182,7 @@ namespace CybersecurityChatbot
 
         /// <summary>
         /// Loads logo.png (or logo.jpg) from the application folder.
-        /// Place your image file in the same folder as the .exe and name it "logo.png".
-        /// </summary>
+        
         private void LoadLogo()
         {
             try
@@ -214,7 +213,7 @@ namespace CybersecurityChatbot
                     }
                 }
             }
-            catch { /* logo is optional; silently skip if missing */ }
+            catch {  }
         }
 
         /// <summary>
@@ -226,10 +225,16 @@ namespace CybersecurityChatbot
             {
                 string path = Path.Combine(
                     AppDomain.CurrentDomain.BaseDirectory, "greeting.wav");
+
                 if (File.Exists(path))
                     new SoundPlayer(path).Play();
+                else
+                    MessageBox.Show("greeting.wav not found at: " + path);
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Audio error: " + ex.Message);
+            }
         }
 
         private void LoadAsciiArt()

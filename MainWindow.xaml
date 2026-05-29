@@ -13,6 +13,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        
+        
 
         <!-- Header with Logo -->
         <Border Grid.Row="0" Background="#2C3E50" Padding="15">
@@ -29,9 +31,18 @@
                     <TextBlock x:Name="SentimentLabel" 
                                Text="Neutral" 
                                Foreground="#BDC3C7" 
-                               FontSize="12"/>
+                               FontSize="12" Cursor="Hand"/>
                 </StackPanel>
             </StackPanel>
+        </Border>
+
+        <!-- ASCII Art -->
+        <Border Grid.Row="1" Background="#2C3E50" Padding="4">
+            <TextBlock x:Name="AsciiArtBlock"
+               FontFamily="Courier New" FontSize="5"
+               Foreground="#00D4FF"
+               HorizontalAlignment="Center"
+               TextAlignment="Center"/>
         </Border>
 
         <!-- Chat Area -->

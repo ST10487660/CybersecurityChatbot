@@ -1,19 +1,26 @@
-name: C# CI Pipeline
+name: ci
 
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-dotnet@v4
+      - name: Set up .NET 8
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0
+          dotnet-version: '8.0.x'
 
-      - run: dotnet restore PoePartOne.sln
-      - run: dotnet build PoePartOne.sln --configuration Release --no-restore
+      - name: Restore dependencies
+        run: dotnet restore CybersecurityChatbot/CybersecurityChatbot.csproj
+
+      - name: Build
+        run: dotnet build CybersecurityChatbot/CybersecurityChatbot.csproj --no-restore --configuration Release

@@ -83,18 +83,6 @@ CybersecurityChatbot/
 
 ---
 
-## Screenshots
 
-_Add a screenshot of the running application here._
-
----
-
-## GitHub Actions
-
-_Add a screenshot of the green build tick from the Actions tab here._
-
----
-
-## Video presentation
 
 

@@ -191,10 +191,9 @@ namespace CybersecurityChatbot
                 string[] candidates = new[]
                 {
                     Path.Combine(baseDir, "logo.png"),
-                    Path.Combine(baseDir, "logo.jpg"),
-                    Path.Combine(baseDir, "logo.bmp"),
+
                     Path.Combine(baseDir, "Assets", "logo.png"),
-                    Path.Combine(baseDir, "Assets", "logo.jpg")
+                    
                 };
 
                 foreach (string path in candidates)
@@ -216,7 +215,7 @@ namespace CybersecurityChatbot
         }
 
         /// <summary>
-        /// Plays greeting.wav from the application folder if it exists.
+        /// Plays greeting.wav from the application folder 
         /// </summary>
         private void PlayVoiceGreeting()
         {

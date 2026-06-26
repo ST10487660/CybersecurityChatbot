@@ -43,13 +43,111 @@
                        TextAlignment="Center"/>
         </Border>
 
-        <!-- Chat Area -->
-        <ScrollViewer x:Name="ChatScroll" Grid.Row="2"
-                      VerticalScrollBarVisibility="Auto"
-                      Background="White" 
-                      Padding="10">
-            <StackPanel x:Name="ChatPanel" Orientation="Vertical"/>
-        </ScrollViewer>
+        <!-- Main Tabs: Chat / Tasks / Quiz -->
+        <TabControl Grid.Row="2">
+
+            <!-- ── Chat Tab ───────────────────────────────────────── -->
+            <TabItem Header="Chat">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Quick-topic chips -->
+                    <StackPanel Grid.Row="1" Orientation="Horizontal"
+                                Margin="10,4,10,0" HorizontalAlignment="Left"
+                                Panel.ZIndex="1">
+                        <Button Content="Password" Tag="Tell me about passwords" Click="Chip_Click" Margin="0,0,6,0"/>
+                        <Button Content="Phishing" Tag="Tell me about phishing" Click="Chip_Click" Margin="0,0,6,0"/>
+                        <Button Content="VPN" Tag="Tell me about VPN" Click="Chip_Click" Margin="0,0,6,0"/>
+                    </StackPanel>
+
+                    <!-- Chat Area -->
+                    <ScrollViewer x:Name="ChatScroll" Grid.Row="0"
+                                  VerticalScrollBarVisibility="Auto"
+                                  Background="White"
+                                  Padding="10">
+                        <StackPanel x:Name="ChatPanel" Orientation="Vertical"/>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+
+            <!-- ── Tasks Tab ──────────────────────────────────────── -->
+            <TabItem Header="Tasks">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Add task row -->
+                    <Grid Grid.Row="0" Margin="0,0,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="TaskTitleInput" Grid.Column="0"
+                                 Height="32" Margin="0,0,8,0" Padding="6"
+                                 ToolTip="Task title, e.g. Enable 2FA"/>
+                        <TextBox x:Name="TaskReminderInput" Grid.Column="1"
+                                 Height="32" Margin="0,0,8,0" Padding="6"
+                                 ToolTip="Reminder (optional), e.g. 3 days"/>
+                        <Button Grid.Column="2" Content="Add Task"
+                                Width="90" Height="32"
+                                Click="AddTask_Click"/>
+                    </Grid>
+
+                    <Button Grid.Row="1" Content="Refresh Tasks"
+                            HorizontalAlignment="Left"
+                            Width="110" Height="28" Margin="0,0,0,8"
+                            Click="RefreshTasks_Click"/>
+
+                    <!-- Task list -->
+                    <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+                        <StackPanel x:Name="TaskListPanel" Orientation="Vertical"/>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+
+            <!-- Quiz Tab -->
+            <TabItem Header="Quiz">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Button x:Name="StartQuizButton" Grid.Row="0" Content="Start Quiz"
+                            HorizontalAlignment="Left"
+                            Width="100" Height="32" Margin="0,0,0,8"
+                            Click="StartQuiz_Click"/>
+
+                    <TextBlock x:Name="QuizProgressText" Grid.Row="1"
+                               Text="Click Start Quiz to begin."
+                               FontWeight="SemiBold" Margin="0,0,0,8"/>
+
+                    <StackPanel Grid.Row="2">
+                        <TextBlock x:Name="QuizQuestionText" TextWrapping="Wrap"
+                                   FontSize="14" Margin="0,0,0,12"/>
+
+                        <StackPanel x:Name="QuizOptionsPanel" Orientation="Vertical"/>
+
+                        <TextBlock x:Name="QuizFeedbackText" TextWrapping="Wrap"
+                                   Margin="0,12,0,0" FontStyle="Italic"/>
+                    </StackPanel>
+
+                    <Button x:Name="NextQuestionButton" Grid.Row="3" Content="Next Question"
+                            HorizontalAlignment="Left" Width="120" Height="32"
+                            Margin="0,12,0,0" Visibility="Collapsed"
+                            Click="NextQuestion_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
 
         <!-- Input Area -->
         <Border Grid.Row="3" Background="#ECF0F1" Padding="10">

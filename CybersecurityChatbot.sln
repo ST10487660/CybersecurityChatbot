@@ -1,9 +1,32 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36915.13 d17.14
+VisualStudioVersion = 17.14.36915.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CybersecurityChatbot", "CybersecurityChatbot.csproj", "{C63103AE-42DC-4A44-9B42-EB640B005E51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\ActivityLog.cs = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\ActivityLog.cs
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\App.config = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\App.config
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\App.xaml = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\App.xaml
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\App.xaml.cs = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\App.xaml.cs
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\ChatBot.cs = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\ChatBot.cs
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\CybersecurityChatbot.csproj = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\CybersecurityChatbot.csproj
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\CybersecurityChatbot.csproj.user = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\CybersecurityChatbot.csproj.user
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\CybersecurityChatbot.sln = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\CybersecurityChatbot.sln
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\DatabaseHelper.cs = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\DatabaseHelper.cs
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\KeywordResponder.cs = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\KeywordResponder.cs
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\MainWindow.xaml = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\MainWindow.xaml
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\MainWindow.xaml.cs = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\MainWindow.xaml.cs
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\MemoryStore.cs = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\MemoryStore.cs
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\NlpProcessor.cs = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\NlpProcessor.cs
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\packages.config = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\packages.config
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\QuizManager.cs = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\QuizManager.cs
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\README.md = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\README.md
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\SentimentDetector.cs = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\SentimentDetector.cs
+		..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\TaskAssistant.cs = ..\..\..\Downloads\CybersecurityChatbot_fixed (1)\CybersecurityChatbot\TaskAssistant.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
